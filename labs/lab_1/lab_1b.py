@@ -61,7 +61,7 @@ def main():
         else:
             print("invalid input, please try again.")
     
-
+    print("test")
     # Perform the calculation and display the result
     result = simple_calculator(operation, num1, num2)
     print(f"The result of {operation}ing {num1} and {num2} is: {result}")
