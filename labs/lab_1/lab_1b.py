@@ -41,10 +41,26 @@ def main():
     
     print(f"===== Simple Calculator =====")
 
-    # Ask the user for sample input    
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
-    operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
+    # Ask the user for sample input
+    while True:
+        num1 = float(input("Enter the first number: "))
+        if type(num1) == float or type(num1) == int:
+            break
+        else:
+            print("invalid input, please try again.")    
+    while True:
+        num2 = float(input("Enter the second number: "))
+        if type(num2) == float or type(num2) == int:
+            break
+        else:
+            print("invalid input, please try again.")
+    while True:
+        operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
+        if operation == "add" or operation == "subtract" or operation == "multiply" or operation == "divide":
+            break
+        else:
+            print("invalid input, please try again.")
+    
 
     # Perform the calculation and display the result
     result = simple_calculator(operation, num1, num2)
